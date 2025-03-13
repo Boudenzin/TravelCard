@@ -28,8 +28,28 @@ body {
     background-color: white;
     border: 1px solid #bacdd8;
     border-radius: 12px;
-    padding: 8px /* Espaçamento entre a border e o conteudo */
+    padding: 8px; /* Espaçamento entre a border e o conteudo */
+    animation: fadeIn 0.8s ease-out forwards; /* Animação ao carregar */
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+     to {
+        opacity: 1;
+        transform: translateY(0);
+     }
+}
+
+.cartão:hover {
+    transform: scale(1.05); 
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.1); /* Padrão de box-shadow leve" */
+}
+
 
 .etiqueta {
     padding: 4px 8px;
@@ -69,14 +89,19 @@ button {
 
     /* Como é um objeto clickavel, precisa de um cursor */
     cursor: pointer;
+
+    transition: background-color 0.3s ease, transform 0.2 ease;
 }
 
 button:focus,
 button:hover{
     background-color: #0077ff;
-    color: #e0efff
+    color: #e0efff;
+    transform: scale(1.05);
 }
-
+button.active {
+    transform: scale(0.95); /* Efeito de clique */
+}
 
 .detalhes{
     padding: 16px 8px 8px 8px;

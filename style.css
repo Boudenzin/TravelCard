@@ -1,144 +1,115 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500;600&display=swap");
 
-img {
-    width: 100%;
-    border-radius: 12px;
-    height: 200px;
-
-    /* A operação de baixo irá manter a imagem com as medidas atuais */
-    object-fit: cover;
-}
-
 body {
     background-color: #eaeff1;
     font-family: "Raleway", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
 }
 
-#container {
-    max-width: 300px;
-
-    /* Centraliza o container no meio do eixo horizontal*/
-    margin: 0 auto;
-    
-    /* Adiciona um espaço vazio acima do container (20% da "view height") */
-    margin-top: 20vh;
+/* Galeria organizada em grid */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 900px;
 }
 
+/* Estilização dos cartões */
 .cartão {
     background-color: white;
     border: 1px solid #bacdd8;
     border-radius: 12px;
-    padding: 8px; /* Espaçamento entre a border e o conteudo */
-    animation: fadeIn 0.8s ease-out forwards; /* Animação ao carregar */
-
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 8px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s ease-out forwards;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-@keyframes fade-in {
+.cartão:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Imagem dentro do cartão */
+img {
+    width: 100%;
+    border-radius: 12px;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Efeito de Fade-in */
+@keyframes fadeIn {
     from {
         opacity: 0;
         transform: translateY(20px);
     }
-     to {
+    to {
         opacity: 1;
         transform: translateY(0);
-     }
+    }
 }
 
-.cartão:hover {
-    transform: scale(1.05); 
-    box-shadow: 0px 4px 4px rgba(0,0,0,0.1); /* Padrão de box-shadow leve" */
+/* Detalhes do cartão */
+.detalhes {
+    padding: 16px 8px 8px 8px;
 }
-
 
 .etiqueta {
     padding: 4px 8px;
     border: 1px solid #e5eaed;
-
     border-radius: 50px;
     font-size: 12px;
     font-weight: 600;
-    color: #788697
+    color: #788697;
 }
 
+/* Nome do local */
 .name {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
-
-    margin-top: 16px; 
+    margin-top: 12px;
 }
 
+/* Texto */
 p {
     font-size: 14px;
     color: #7f8c9b;
     line-height: 150%;
 }
 
+/* Estilização do botão */
 button {
     border: none;
     padding: 12px 24px;
     border-radius: 50px;
-
     font-weight: 600;
     color: #0077ff;
     background-color: #e0efff;
-
-    /* Para funcionar precisa ter um margin 0 block e um display block */
     margin: 0 auto;
     display: block;
-
-    /* Como é um objeto clickavel, precisa de um cursor */
     cursor: pointer;
-
-    transition: background-color 0.3s ease, transform 0.2 ease;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-button:focus,
-button:hover{
+button:hover {
     background-color: #0077ff;
-    color: #e0efff;
-    transform: scale(1.05);
-}
-button.active {
-    transform: scale(0.95); /* Efeito de clique */
+    color: white;
+    transform: scale(1.1);
 }
 
-.detalhes{
-    padding: 16px 8px 8px 8px;
-}
-
-@media (min-width: 480px) {
-    #container {
-        max-width: 400px;
-    }
-}
-
-@media (min-width: 768px) {
-    #container {
-        max-width: 500px
-    }
-    .cartão {
-        display: flex; /* Em telas maiores os filhos ficam lado a lado */
-        align-items: center;
-        gap: 16px;
-    }
-    img {
-        width: 50%;
-        height: auto;
-    }
-    .detalhes {
-        width: 50%
-    }
-    p {
-        font-size: 16px;
-    }
-}
-
-@media (min-width: 1024px) {
-    #container {
-        max-width: 600px;
-    }
-    img {
-        height: 300px;
-    }
+button:active {
+    transform: scale(1);
 }

@@ -75,19 +75,19 @@ TravelCard/
 
 Aqui estão futuras metas que quero implementar nesse projeto
 
-1. **Responsividade Avançada**:
+1. **Responsividade Avançada ✅**:
    - Melhorar a adaptação do cartão para dispositivos móveis e tablets.
 
 2. **Interatividade com JavaScript**:
    - Adicionar funcionalidades como abrir uma página detalhada ao clicar no botão "Leia Mais".
 
-3. **Animações**:
+3. **Animações ✅**:
    - Incluir animações CSS para tornar o cartão mais dinâmico.
 
-4. **Multiplos Cartões**:
+4. **Multiplos Cartões ✅**:
    - Criar uma lista de cartões para diferentes locais, como uma galeria.
 
-5. **Integração com Backend**:
+5. **Integração com Backend ✅**:
    - Usar um backend simples (Node.js, Flask) para carregar dados dinamicamente.
 
 6. **Deploy**:

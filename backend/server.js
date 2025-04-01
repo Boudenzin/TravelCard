@@ -34,7 +34,14 @@ const locais = [
         descricao: "Cavernas, rios de águas cristalinas e cachoeiras incríveis.",
         etiquetas: ["Natureza", "Cachoeira"],
         imagem: "https://www.cnnbrasil.com.br/viagemegastronomia/wp-content/uploads/sites/5/2022/03/Gruta-do-Lago-Azul-Hudson-Garcia-11-1_Easy-Resize.com_.jpg"
+    },
+    {
+        nome: "Gramado",
+        descricao: "Cidade charmosa com influência europeia, ideal para curtir o frio e festivais.",
+        etiquetas: ["Serra", "Turismo"],
+        imagem: "https://th.bing.com/th/id/OIP.BJK0_Vm95KkKCfe4abK3LQAAAA?rs=1&pid=ImgDetMain"
     }
+            
 
 ];
 

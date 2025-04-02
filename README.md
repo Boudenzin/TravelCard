@@ -79,7 +79,8 @@ Aqui estão futuras metas que quero implementar nesse projeto
    - Melhorar a adaptação do cartão para dispositivos móveis e tablets.
 
 2. **Interatividade com JavaScript**:
-   - Adicionar funcionalidades como abrir uma página detalhada ao clicar no botão "Leia Mais".
+   - Adicionar funcionalidades como abrir uma página detalhada ao clicar no botão "Leia Mais". ✅
+   - Adicionar uma descrição detalhada do local com uma média do preço de passagens
 
 3. **Animações ✅**:
    - Incluir animações CSS para tornar o cartão mais dinâmico.

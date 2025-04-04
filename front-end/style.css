@@ -151,3 +151,25 @@ button:active {
 .close:hover {
     color: black;
 }
+
+.modal-imagem {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-imagem img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.modal-detalhes {
+    flex: 2
+    padding: 20px;
+}
+
+#modal-etiquetas {
+    margin-bottom: 10px;
+}
+

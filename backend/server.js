@@ -9,37 +9,43 @@ const locais = [
         nome: "Fernando de Noronha",
         descricao: "Ilha paradisíaca com praias incríveis e águas cristalinas.",
         etiquetas: ["Natureza", "Ilha"],
-        imagem: "https://i.pinimg.com/564x/08/e3/ff/08e3ff458d173fa0753252f8fff521d3.jpg"
+        imagem: "https://i.pinimg.com/564x/08/e3/ff/08e3ff458d173fa0753252f8fff521d3.jpg",
+        link: "https://www.noronha.pe.gov.br/"
     },
     {
         nome: "Dalian",
         descricao: " Dalian é um refúgio encantador para quem quer fugir das grandes metrópoles chinesas, com ar puro, paisagens deslumbrantes e uma atmosfera tranquila.",
         etiquetas: ["Cidade", "China"],
-        imagem: "https://rare-gallery.com/thumbnail/412908-China-city-lights-chinese-city-Dalian.jpg"
+        imagem: "https://rare-gallery.com/thumbnail/412908-China-city-lights-chinese-city-Dalian.jpg",
+        link: "https://www.tripadvisor.pt/Attractions-g297452-Activities-Dalian_Liaoning.html"
     },
     {
         nome: "João Pessoa",
         descricao: "Conhecida pelas praias paradisíacas e pelo ponto mais oriental das Américas.",
         etiquetas: ["Praia", "Nordeste"],
-        imagem: "https://i.pinimg.com/736x/df/59/c7/df59c7d088f71152a771350455207dcd.jpg"
+        imagem: "https://i.pinimg.com/736x/df/59/c7/df59c7d088f71152a771350455207dcd.jpg",
+        link: "https://turismo.joaopessoa.pb.gov.br/"
     },
     {
         nome: "Chapada Diamantina",
         descricao: "Trilhas, cachoeiras e vales imponentes atraem amantes de ecoturismo e aventura.",
         etiquetas: ["Montanha", "Trilha"],
-        imagem: "https://i.pinimg.com/736x/a8/09/e6/a809e6c9ae8f12486532c6ecba75d5cd.jpg"
+        imagem: "https://i.pinimg.com/736x/a8/09/e6/a809e6c9ae8f12486532c6ecba75d5cd.jpg",
+        link: "https://www.guiachapadadiamantina.com.br/"
     },
     {
         nome: "Bonito",
         descricao: "Cavernas, rios de águas cristalinas e cachoeiras incríveis.",
         etiquetas: ["Natureza", "Cachoeira"],
-        imagem: "https://www.cnnbrasil.com.br/viagemegastronomia/wp-content/uploads/sites/5/2022/03/Gruta-do-Lago-Azul-Hudson-Garcia-11-1_Easy-Resize.com_.jpg"
+        imagem: "https://www.cnnbrasil.com.br/viagemegastronomia/wp-content/uploads/sites/5/2022/03/Gruta-do-Lago-Azul-Hudson-Garcia-11-1_Easy-Resize.com_.jpg",
+        link: "https://www.turismo.bonito.ms.gov.br/"
     },
     {
         nome: "Gramado",
         descricao: "Cidade charmosa com influência europeia, ideal para curtir o frio e festivais.",
         etiquetas: ["Serra", "Turismo"],
-        imagem: "https://th.bing.com/th/id/OIP.BJK0_Vm95KkKCfe4abK3LQAAAA?rs=1&pid=ImgDetMain"
+        imagem: "https://th.bing.com/th/id/OIP.BJK0_Vm95KkKCfe4abK3LQAAAA?rs=1&pid=ImgDetMain",
+        link: "https://www.gramadooficial.com.br/"
     }
             
 

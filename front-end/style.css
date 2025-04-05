@@ -115,7 +115,7 @@ button:active {
 }
 
 .modal {
-    display: none; /* Garante que o modal começa escondido */
+    display: none;
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -128,12 +128,23 @@ button:active {
 }
 
 .modal-conteudo {
+    display: flex;
     background: white;
     padding: 20px;
     border-radius: 8px;
-    width: 50%;
-    text-align: center;
+    width: 80%;
+    max-width: 800px;
     position: relative;
+}
+
+@media (max-width: 768px) {
+    .modal-conteudo {
+        flex-direction: column;
+    }
+    .modal-imagem img {
+        width: 100%;
+        height: auto;
+    }
 }
 
 .close {
@@ -152,24 +163,47 @@ button:active {
     color: black;
 }
 
-.modal-imagem {
+.modal-image {  
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.modal-imagem img {
+
+.modal-image img {
     max-width: 100%;
     border-radius: 8px;
 }
 
 .modal-detalhes {
-    flex: 2
+    flex: 2;
     padding: 20px;
 }
 
 #modal-etiquetas {
     margin-bottom: 10px;
+}
+
+.modal-info {
+    flex: 1;
+    padding: 0 20px;
+    text-align: left;
+}
+
+.saiba-mais-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #0077ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.saiba-mais-btn:hover {
+    background-color: #0055cc;
 }
 

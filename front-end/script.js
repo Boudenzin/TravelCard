@@ -11,7 +11,7 @@ const closeBtn = document.querySelector(".close");
 function abrirModal(dados) {
     modalTitulo.textContent = dados.nome;
     modalImagem.src = dados.imagem;
-    modalDescricao.textContent = dados.descricao;
+    modalDescricao.textContent = dados.descricaoDetalhada;
     modalEtiquetas.innerHTML = dados.etiquetas.map(etiqueta => 
         `<span class="etiqueta">${etiqueta}</span>`
     ).join('');
@@ -41,34 +41,33 @@ fetch('http://localhost:3000/locais')
         const container = document.getElementById('cartoes-container');
         
         locais.forEach(local => {
-            const cardHTML = `
-                <div class="cartão">
-                    <img src="${local.imagem}" alt="${local.nome}">
-                    <div class="detalhes">
-                        ${local.etiquetas.map(etiqueta => 
-                            `<span class="etiqueta">${etiqueta}</span>`
-                        ).join('')}
-                        <div class="name">${local.nome}</div>
-                        <p>${local.descricao}</p>
-                        <button class="leia-mais" data-nome="${local.nome}"
-                            data-descricao="${local.descricao}"
-                            data-imagem="${local.imagem}"
-                            data-etiquetas='${JSON.stringify(local.etiquetas)}'
-                            data-link="${local.link}">
-                            Leia Mais
-                        </button>
-                    </div>
+            const card = document.createElement('div');
+            card.classList.add('cartão');
+            card.innerHTML = `
+                <img src="${local.imagem}" alt="${local.nome}">
+                <div class="detalhes">
+                    ${local.etiquetas.map(etiqueta => 
+                        `<span class="etiqueta">${etiqueta}</span>`
+                    ).join('')}
+                    <div class="name">${local.nome}</div>
+                    <p>${local.descricao}</p>
+                    <button class="leia-mais">Leia Mais</button>
                 </div>
             `;
-            container.innerHTML += cardHTML;
+            
+            const botao = card.querySelector('.leia-mais');
+            botao.addEventListener('click', () => abrirModal(local));
+        
+            container.appendChild(card);
         });
+        
 
         // Adiciona eventos aos botões
         document.querySelectorAll('.leia-mais').forEach(botao => {
             botao.addEventListener('click', function() {
                 const dados = {
                     nome: this.dataset.nome,
-                    descricao: this.dataset.descricao,
+                    descricaoDetalhada: this.dataset.descricaoDetalhada,
                     imagem: this.dataset.imagem,
                     etiquetas: JSON.parse(this.dataset.etiquetas),
                     link: this.dataset.link

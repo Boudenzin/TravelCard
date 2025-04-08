@@ -53,21 +53,15 @@ O projeto está organizado da seguinte forma:
 
 ```
 TravelCard/
-├── index.html            # Arquivo HTML principal.
-├── style.css             # Arquivo CSS para estilização.
-└── README.md             # Este arquivo.
+├── backend/
+│   ├── server.js
+├── front-end/
+│   ├── index.html
+│   ├── script.js
+│   ├── style.css
+├── LICENSE
+└── README.md
 ```
-
-### Detalhes do Código
-
-- **HTML (`index.html`)**:
-  - Estrutura do cartão com uma imagem, etiquetas, nome do local, descrição e botão.
-  - Uso de `divs` para organizar o conteúdo.
-
-- **CSS (`style.css`)**:
-  - Estilização responsiva da imagem, texto e botão.
-  - Uso de `flexbox` para centralizar o cartão na tela.
-  - Efeitos de hover e foco no botão "Leia Mais".
 
 ---
 

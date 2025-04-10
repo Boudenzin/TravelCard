@@ -8,6 +8,7 @@ body {
     align-items: center;
     min-height: 100vh;
     padding: 20px;
+    padding-top: 60px;
 }
 
 /* Galeria organizada em grid */
@@ -212,5 +213,18 @@ button:active {
 
 .saiba-mais-btn:hover {
     background-color: #0055cc;
+}
+
+.top-bar {
+    width:100%;
+    background-color: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1001;
 }
 

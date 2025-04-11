@@ -8,7 +8,7 @@ body {
     align-items: center;
     min-height: 100vh;
     padding: 20px;
-    padding-top: 60px;
+    padding-top: 90px;
 }
 
 /* Galeria organizada em grid */
@@ -226,5 +226,18 @@ button:active {
     position: fixed;
     top: 0;
     z-index: 1001;
+    border-radius: 8px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-img {
+    height: 40px; /* ajuste conforme o tamanho da sua logo */
+    max-width: 200px;
+    object-fit: contain;
 }
 

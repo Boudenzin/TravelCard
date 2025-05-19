@@ -216,28 +216,56 @@ button:active {
 }
 
 .top-bar {
-    width:100%;
-    background-color: white;
-    padding: 20px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-    border-radius: 8px;
+  width: 100%;
+  background-color: white;
+  padding: 20px 20px; /* Adicionei um padding nas laterais */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  display: grid; /* Mudança para Grid */
+  grid-template-columns: auto 1fr auto; /* Define três colunas: auto para logo, espaço flexível, auto para botões */
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  border-radius: 8px;
 }
 
 .logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  grid-column: 2; /* Posiciona a logo na primeira coluna */
+  display: flex; /* Mantém o alinhamento interno da logo */
+  justify-content: center; /* Centraliza a logo dentro da sua célula */
+  margin-left: 120px; /* Adiciona margem à esquerda para afastar da borda */
 }
 
 .logo-img {
-    height: 40px; /* ajuste conforme o tamanho da sua logo */
-    max-width: 200px;
-    object-fit: contain;
+  height: 40px;
+  max-width: 200px;
+  object-fit: contain;
 }
 
+.auth-buttons {
+  grid-column: 3; /* Posiciona os botões na terceira coluna */
+  display: flex;
+  gap: 10px;
+  justify-self: end; /* Alinha os botões à direita dentro da sua célula */
+  margin-right: 10px; /* Adiciona margem à direita para afastar da borda */
+}
+
+.auth-buttons button {
+  padding: 10px 16px;
+  border-radius: 20px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #0077ff;
+  color: white;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.auth-buttons button:hover {
+  background-color: #0055cc;
+  transform: scale(1.05);
+}
+
+.auth-buttons button:active {
+  transform: scale(1);
+}

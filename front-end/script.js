@@ -1,3 +1,20 @@
+// Importando o Firebase
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-app.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-auth.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-firestore.js";
+
+const firebaseConfig = {
+apiKey: "AIzaSyCx89vd7ghLv1XNy3Yq_vjjAbYTFLB4qHo",
+authDomain: "travelcardapp-39644.firebaseapp.com",
+projectId: "travelcardapp-39644",
+storageBucket: "travelcardapp-39644.appspot.com",
+messagingSenderId: "891066049296",
+appId: "1:891066049296:web:f0d87274b021cf5c3ebb95"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
 // Elementos do modal
 const modal = document.getElementById("modal");
 const modalTitulo = document.getElementById("modal-titulo");
@@ -60,21 +77,83 @@ fetch('http://localhost:3000/locais')
         
             container.appendChild(card);
         });
-        
-
-        // Adiciona eventos aos botões
-        document.querySelectorAll('.leia-mais').forEach(botao => {
-            botao.addEventListener('click', function() {
-                const dados = {
-                    nome: this.dataset.nome,
-                    descricaoDetalhada: this.dataset.descricaoDetalhada,
-                    imagem: this.dataset.imagem,
-                    etiquetas: JSON.parse(this.dataset.etiquetas),
-                    link: this.dataset.link
-                };
-                abrirModal(dados);
-            });
-        });
     })
     .catch(error => console.error('Erro:', error));
 
+
+// Abrir e fechar o modal da autenticação
+const authModal = document.getElementById("auth-modal");
+const loginBtn = document.querySelector(".login-btn");
+const signupBtn = document.querySelector(".signup-btn");
+const closeAuth = document.querySelector(".close-auth");
+
+loginBtn.addEventListener("click", () => {
+    authModal.style.display = "flex";
+    document.getElementById("login-form").style.display = "block";
+    document.getElementById("signup-form").style.display = "none";
+})
+
+signupBtn.addEventListener("click", () => {
+    authModal.style.display = "flex";
+    document.getElementById("signup-form").style.display = "block";
+    document.getElementById("login-form").style.display = "none";
+});
+
+closeAuth.addEventListener("click", () => {
+    authModal.style.display = "none";
+    document.getElementById("login-form").style.display = "none";
+    document.getElementById("signup-form").style.display = "none";
+});
+
+// Alternar entre login e signup
+document.getElementById("show-signup").addEventListener("click", (e) => {
+    e.preventDefault();
+    document.getElementById("login-form").style.display = "none";
+    document.getElementById("signup-form").style.display = "block";
+});
+
+document.getElementById("show-login").addEventListener("click", (e) => {    
+    e.preventDefault();
+    document.getElementById("signup-form").style.display = "none";
+    document.getElementById("login-form").style.display = "block";
+});
+
+//Cadastro de usuário
+document.getElementById("signup-form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const email = document.getElementById("signup-email").value;
+    const senha = document.getElementById("signup-senha").value;
+
+    createUserWithEmailAndPassword(auth, email, senha)
+        .then((userCredential) => {
+            // Usuário cadastrado com sucesso
+            const user = userCredential.user;
+            console.log("Usuário cadastrado:", user);
+            authModal.style.display = "none";
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.error("Erro ao cadastrar:", errorCode, errorMessage);
+        });
+});
+
+// Login de usuário
+document.getElementById("login-form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const email = document.getElementById("login-email").value;
+    const senha = document.getElementById("login-senha").value;
+
+    signInWithEmailAndPassword(auth, email, senha)
+        .then((userCredential) => {
+            // Usuário logado com sucesso
+            const user = userCredential.user;
+            console.log("Usuário logado:", user);
+            authModal.style.display = "none";
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.error("Erro ao fazer login:", errorCode, errorMessage);
+        });
+});

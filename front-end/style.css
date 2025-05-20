@@ -11,6 +11,7 @@ body {
     padding-top: 90px;
 }
 
+
 /* Galeria organizada em grid */
 .galeria {
     display: grid;
@@ -115,6 +116,9 @@ button:active {
     transform: scale(1);
 }
 
+
+/* Estilização do modal */
+/* Modal */
 .modal {
     display: none;
     position: fixed;
@@ -127,6 +131,7 @@ button:active {
     justify-content: center;
     align-items: center;
 }
+
 
 .modal-conteudo {
     display: flex;
@@ -215,6 +220,8 @@ button:active {
     background-color: #0055cc;
 }
 
+
+/* Estilização do topo da página */
 .top-bar {
   width: 100%;
   background-color: white;
@@ -233,7 +240,7 @@ button:active {
   grid-column: 2; /* Posiciona a logo na primeira coluna */
   display: flex; /* Mantém o alinhamento interno da logo */
   justify-content: center; /* Centraliza a logo dentro da sua célula */
-  margin-left: 120px; /* Adiciona margem à esquerda para afastar da borda */
+  margin-left: 160px; /* Adiciona margem à esquerda para afastar da borda */
 }
 
 .logo-img {
@@ -268,4 +275,38 @@ button:active {
 
 .auth-buttons button:active {
   transform: scale(1);
+}
+
+/* Estilização do formulário de login */
+.auth-modal-conteudo {
+    max-width: 400px;
+    width: 90%;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.auth-modal-conteudo input {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.auth-modal-conteudo button {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #0077ff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.auth-modl-conteudo a {
+    color: #0077ff;
+    cursor: pointer;
 }

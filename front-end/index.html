@@ -8,6 +8,27 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
+
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-app.js";
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-auth.js";
+    import { getFirestore } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-firestore.js";
+
+    const firebaseConfig = {
+    apiKey: "AIzaSyCx89vd7ghLv1XNy3Yq_vjjAbYTFLB4qHo",
+    authDomain: "travelcardapp-39644.firebaseapp.com",
+    projectId: "travelcardapp-39644",
+    storageBucket: "travelcardapp-39644.appspot.com",
+    messagingSenderId: "891066049296",
+    appId: "1:891066049296:web:f0d87274b021cf5c3ebb95"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getFirestore(app);
+</script>
+
+
 <body>
 
     <header class="top-bar">
@@ -19,6 +40,35 @@
             <button class="signup-btn">Cadastro</button>
         </div>
     </header>
+
+    <!-- Modal de Autenticação -->
+    <div id="auth-modal" class="modal" style="display:none;">
+        <div class="modal-conteudo auth modal-conteudo">
+            <span class="close-auth">&times;</span>
+
+            <div id="form-container">
+                <!-- Formulário de Login-->
+                <form id="login-form">
+                    <h2>Login</h2>
+                    <input type="email" id="login-email" placeholder="Email" required>
+                    <input type="password" id="login-password" placeholder="Senha" required>
+                    <button type="submit">Entrar</button>
+                    <p>Não tem conta? <a href="#" id="show-signup">Cadastre-se</a></p>
+                </form>
+
+                <!-- Formulário de Cadastro -->
+                <form id="signup-form" style="display: none;">
+                    <h2>Cadastro</h2>
+                    <input type="email" id="signup-email" placeholder="Email" required>
+                    <input type="password" id="signup-password" placeholder="Senha" required>
+                    <button type="submit">Cadastrar</button>
+                    <p>Já tem conta? <a href="#" id="show-login">Login</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+
 
     
     <!-- Um div com um container pra flutuar o cartão -->
@@ -43,7 +93,7 @@
         </div>
     </div>
 
-    <script src="script.js"></script> <!-- Adicionando o arquivo JavaScript -->
+    <script type="module" src="script.js"></script> <!-- Adicionando o arquivo JavaScript -->
 
     
 

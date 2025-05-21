@@ -95,13 +95,13 @@ Aqui estão futuras metas que quero implementar nesse projeto
 
 ## Objetivos Fase 2
 
-1. **Logo para o TravelCard**:
+1. **Logo para o TravelCard ✅**:
    - Adição da logo feito no Canva com negrito gradiente.
 
 2. **Dark Mode / Customização de Tema**:
    - Adicionar um botão para alternar entre tema claro e escuro.
 
-3. **Sistema de Login (Simples)**:
+3. **Sistema de Login (Simples) ✅**:
    - Login simulado com Firebase ou backend próprio.
 
 4. **Favoritos / Lista de Desejos**:

@@ -4,12 +4,13 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, si
 import { getFirestore } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-firestore.js";
 
 const firebaseConfig = {
-apiKey: "AIzaSyCx89vd7ghLv1XNy3Yq_vjjAbYTFLB4qHo",
-authDomain: "travelcardapp-39644.firebaseapp.com",
-projectId: "travelcardapp-39644",
-storageBucket: "travelcardapp-39644.appspot.com",
-messagingSenderId: "891066049296",
-appId: "1:891066049296:web:f0d87274b021cf5c3ebb95"
+    apiKey: "AIzaSyCC22Aw8U2DLLR8fp97uAv04ME7YtCs7II",
+    authDomain: "travelcardapp-39644.firebaseapp.com",
+    projectId: "travelcardapp-39644",
+    storageBucket: "travelcardapp-39644.firebasestorage.app",
+    messagingSenderId: "891066049296",
+    appId: "1:891066049296:web:f0d87274b021cf5c3ebb95",
+    measurementId: "G-0NMGCQK95F"
 };
 
 const app = initializeApp(firebaseConfig);
@@ -86,6 +87,17 @@ const authModal = document.getElementById("auth-modal");
 const loginBtn = document.querySelector(".login-btn");
 const signupBtn = document.querySelector(".signup-btn");
 const closeAuth = document.querySelector(".close-auth");
+// Seleciona o modal
+    
+const modalContent = document.querySelector('.auth-modal-conteudo');
+
+// Escuta o clique no modal
+authModal.addEventListener('click', function (event) {
+    // Se clicou fora do conteúdo do modal
+    if (!modalContent.contains(event.target)) {
+        authModal.style.display = 'none'
+    }
+});
 
 loginBtn.addEventListener("click", () => {
     authModal.style.display = "flex";
@@ -122,7 +134,7 @@ document.getElementById("show-login").addEventListener("click", (e) => {
 document.getElementById("signup-form").addEventListener("submit", (e) => {
     e.preventDefault();
     const email = document.getElementById("signup-email").value;
-    const senha = document.getElementById("signup-senha").value;
+    const senha = document.getElementById("signup-password").value;
 
     createUserWithEmailAndPassword(auth, email, senha)
         .then((userCredential) => {
@@ -142,7 +154,7 @@ document.getElementById("signup-form").addEventListener("submit", (e) => {
 document.getElementById("login-form").addEventListener("submit", (e) => {
     e.preventDefault();
     const email = document.getElementById("login-email").value;
-    const senha = document.getElementById("login-senha").value;
+    const senha = document.getElementById("login-password").value;
 
     signInWithEmailAndPassword(auth, email, senha)
         .then((userCredential) => {

@@ -277,36 +277,117 @@ button:active {
   transform: scale(1);
 }
 
-/* Estilização do formulário de login */
-.auth-modal-conteudo {
-    max-width: 400px;
-    width: 90%;
-    background: white;
-    padding: 2rem;
-    border-radius: 10px;
+/* Fundo do modal */
+.modal-auth {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1002;
 }
 
+/* Container do conteúdo do modal */
+.auth-modal-conteudo {
+    background: #ffffff;
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: fadeInUp 0.3s ease-in-out;
+}
+
+/* Animação */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Botão de fechar */
+.close-auth {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #aaa;
+    transition: color 0.2s;
+}
+
+.close-auth:hover {
+    color: #000;
+}
+
+/* Título do formulário */
+.auth-modal-conteudo h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+/* Inputs */
 .auth-modal-conteudo input {
     width: 100%;
-    padding: 0.8rem;
-    margin: 0.5rem 0;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
 }
 
+.auth-modal-conteudo input:focus {
+    outline: none;
+    border-color: #0077ff;
+}
+
+/* Botões */
 .auth-modal-conteudo button {
     width: 100%;
-    padding: 0.8rem;
+    padding: 0.75rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     background-color: #0077ff;
     color: white;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
 }
 
-.auth-modl-conteudo a {
+.auth-modal-conteudo button:hover {
+    background-color: #005fcc;
+    transform: translateY(-1px);
+}
+
+/* Parágrafos com link */
+.auth-modal-conteudo p {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.auth-modal-conteudo a {
     color: #0077ff;
-    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth-modal-conteudo a:hover {
+    text-decoration: underline;
 }

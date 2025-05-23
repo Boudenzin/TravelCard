@@ -9,26 +9,6 @@
 
 </head>
 
-<script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-app.js";
-    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-auth.js";
-    import { getFirestore } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-firestore.js";
-
-    const firebaseConfig = {
-    apiKey: "AIzaSyCC22Aw8U2DLLR8fp97uAv04ME7YtCs7II",
-    authDomain: "travelcardapp-39644.firebaseapp.com",
-    projectId: "travelcardapp-39644",
-    storageBucket: "travelcardapp-39644.firebasestorage.app",
-    messagingSenderId: "891066049296",
-    appId: "1:891066049296:web:f0d87274b021cf5c3ebb95",
-    measurementId: "G-0NMGCQK95F"
-    };
-
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);
-    const db = getFirestore(app);
-</script>
-
 
 <body>
 
@@ -41,6 +21,20 @@
             <button class="signup-btn">Cadastro</button>
         </div>
     </header>
+
+    <!-- Botão hambúrguer -->
+    <button id="menu-toggle" class="menu-toggle">☰</button>
+
+    <!-- Sidebar -->
+    <nav id="sidebar" class="sidebar">
+    <button id="close-sidebar" class="close-sidebar">×</button>
+    <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="favoritos.html">Favoritos</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+    </ul>
+    </nav>
+
 
     <!-- Modal de Autenticação -->
     <div id="auth-modal" class="modal-auth" style="display:none;">
@@ -94,7 +88,7 @@
         </div>
     </div>
 
-    <script type="module" src="script.js"></script> <!-- Adicionando o arquivo JavaScript -->
+    <script src="script.js"></script> <!-- Adicionando o arquivo JavaScript -->
 
     
 

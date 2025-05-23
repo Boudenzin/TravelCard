@@ -169,3 +169,22 @@ document.getElementById("login-form").addEventListener("submit", (e) => {
             console.error("Erro ao fazer login:", errorCode, errorMessage);
         });
 });
+
+const menuToggle = document.getElementById('menu-toggle');
+const sidebar = document.getElementById('sidebar');
+const closeSidebar = document.getElementById('close-sidebar');
+
+menuToggle.addEventListener('click', () => {
+    sidebar.classList.add('open');
+});
+
+closeSidebar.addEventListener('click', () => {
+    sidebar.classList.remove('open');
+});
+
+// Fechar ao clicar fora da sidebar
+document.addEventListener('click', function (e) {
+    if (!sidebar.contains(e.target) && !menuToggle.contains(e.target)) {
+        sidebar.classList.remove('open');
+    }
+});

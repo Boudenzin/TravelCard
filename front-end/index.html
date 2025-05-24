@@ -12,6 +12,8 @@
 
 <body>
 
+    
+    <!-- Header -->
     <header class="top-bar">
         <div class="logo-container">
             <img src="assets/logo.png" alt="TravelCard" class="logo-img" />
@@ -22,12 +24,16 @@
         </div>
     </header>
 
+
+
     <!-- Botão hambúrguer -->
-    <button id="menu-toggle" class="menu-toggle">☰</button>
+    <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menu">☰</button>
+
+
 
     <!-- Sidebar -->
     <nav id="sidebar" class="sidebar">
-    <button id="close-sidebar" class="close-sidebar">×</button>
+    <button id="close-sidebar" class="close-sidebar" aria-label="Fechar Menu">×</button>
     <ul>
         <li><a href="index.html">Início</a></li>
         <li><a href="favoritos.html">Favoritos</a></li>
@@ -36,10 +42,11 @@
     </nav>
 
 
+
     <!-- Modal de Autenticação -->
-    <div id="auth-modal" class="modal-auth" style="display:none;">
+    <div id="auth-modal" class="modal-auth hidden">
         <div class="auth-modal-conteudo">
-            <span class="close-auth">&times;</span>
+            <span class="close-auth" aria-label="Fechar modal de autenticação">&times;</span>
 
             <div id="form-container">
                 <!-- Formulário de Login-->
@@ -52,7 +59,7 @@
                 </form>
 
                 <!-- Formulário de Cadastro -->
-                <form id="signup-form" style="display: none;">
+                <form id="signup-form" class="hidden">
                     <h2>Cadastro</h2>
                     <input type="email" id="signup-email" placeholder="Email" required>
                     <input type="password" id="signup-password" placeholder="Senha" required>
@@ -75,7 +82,7 @@
 
     <div id="modal" class="modal">
         <div class="modal-conteudo">
-            <span class="close">&times;</span>
+            <span class="close" aria-label="Fechar detalhes do local">&times;</span>
             <div class="modal-imagem">
                 <img id="modal-imagem" src="" alt="Imagem do Local">
             </div>
@@ -88,7 +95,9 @@
         </div>
     </div>
 
-    <script src="script.js"></script> <!-- Adicionando o arquivo JavaScript -->
+
+
+    <script src="script.js" type="module"></script> <!-- Adicionando o arquivo JavaScript -->
 
     
 

@@ -92,6 +92,10 @@ p {
     line-height: 150%;
 }
 
+
+
+
+
 /* Estilização do botão */
 button {
     border: none;
@@ -329,6 +333,10 @@ button:active {
 
 .close-auth:hover {
     color: #000;
+}
+
+.hidden {
+    display: none;
 }
 
 /* Título do formulário */

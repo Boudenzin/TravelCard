@@ -41,7 +41,7 @@ const locais = [
         nome: "Bonito",
         descricao: "Cavernas, rios de águas cristalinas e cachoeiras incríveis.",
         etiquetas: ["Natureza", "Cachoeira"],
-        imagem: "https://www.cnnbrasil.com.br/viagemegastronomia/wp-content/uploads/sites/5/2022/03/Gruta-do-Lago-Azul-Hudson-Garcia-11-1_Easy-Resize.com_.jpg",
+        imagem: "https://www.vivabonito.com.br/wp-content/uploads/2021/06/Gruta-do-lago-azul-6.jpg",
         link: "https://www.turismo.bonito.ms.gov.br/",
         descricaoDetalhada: "Bonito, no Mato Grosso do Sul, é famoso por suas águas transparentes e ecossistema preservado. O Rio da Prata oferece flutuação entre peixes coloridos, enquanto o Abismo Anhumas atrai mergulhadores em suas cavernas submersas. A Gruta do Lago Azul, com seu lago intensamente azul, e o Buraco das Araras, um enorme sumidouro com aves, são imperdíveis. Com estrutura turística organizada, Bonito é um dos melhores destinos de ecoturismo do Brasil."
     },

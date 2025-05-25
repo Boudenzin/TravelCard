@@ -44,13 +44,13 @@
 
 
     <!-- Modal de Autenticação -->
-    <div id="auth-modal" class="modal-auth hidden">
+    <div id="auth-modal" class="modal-auth d-none">
         <div class="auth-modal-conteudo">
             <span class="close-auth" aria-label="Fechar modal de autenticação">&times;</span>
 
             <div id="form-container">
                 <!-- Formulário de Login-->
-                <form id="login-form">
+                <form id="login-form" class="d-none">
                     <h2>Login</h2>
                     <input type="email" id="login-email" placeholder="Email" required>
                     <input type="password" id="login-password" placeholder="Senha" required>
@@ -59,7 +59,7 @@
                 </form>
 
                 <!-- Formulário de Cadastro -->
-                <form id="signup-form" class="hidden">
+                <form id="signup-form" class="d-none">
                     <h2>Cadastro</h2>
                     <input type="email" id="signup-email" placeholder="Email" required>
                     <input type="password" id="signup-password" placeholder="Senha" required>
@@ -80,7 +80,7 @@
 
     
 
-    <div id="modal" class="modal">
+    <div id="modal" class="modal d-none">
         <div class="modal-conteudo">
             <span class="close" aria-label="Fechar detalhes do local">&times;</span>
             <div class="modal-imagem">

@@ -335,8 +335,23 @@ button:active {
     color: #000;
 }
 
-.hidden {
-    display: none;
+
+/* Adicionar ao style.css */
+.d-none {
+    display: none !important; /* Para esconder elementos */
+}
+
+.d-flex {
+    display: flex !important; /* Para mostrar elementos com display flex (como seu modal) */
+}
+
+.d-block {
+    display: block !important; /* Para mostrar elementos com display block (como seus forms) */
+}
+
+/* Opcional: para o body quando um modal estiver aberto */
+.body-no-scroll {
+    overflow: hidden;
 }
 
 /* Título do formulário */

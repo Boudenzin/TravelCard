@@ -19,6 +19,7 @@ O **TravelCard** é um projeto simples que cria um cartão de visita digital par
 - **HTML**: Estruturação do conteúdo do cartão.
 - **CSS**: Estilização do cartão, incluindo layout, cores, fontes e efeitos.
 - **Google Fonts**: Uso da fonte "Raleway" para melhorar a tipografia.
+- **Firebase**: Uso do banco de dados para login, e posteriormente para favoritos, filtro e imagens
 
 ---
 
@@ -40,8 +41,7 @@ O **TravelCard** é um projeto simples que cria um cartão de visita digital par
    cd TravelCard
    ```
 
-3. Abra o arquivo `index.html` no navegador:
-   - Clique duas vezes no arquivo `index.html` ou arraste-o para o navegador.
+3. Abra o arquivo no LiveServer para que o Firebase funcione
 
 4. Visualize o cartão de Fernando de Noronha e interaja com o botão "Leia Mais".
 

@@ -1,14 +1,30 @@
-# TravelCard
+<h1 align="center">TravelCard</h1>
 
-<div>
-   <img src="https://i.imgur.com/NEwn9MY.png">
-</div>
+<p align="center">
+  <img src="https://img.shields.io/github/license/Boudenzin/TravelCard?style=for-the-badge" alt="Licença MIT">
+  <img src="https://img.shields.io/github/last-commit/Boudenzin/TravelCard?style=for-the-badge" alt="Último Commit">
+  <img src="https://img.shields.io/github/repo-size/Boudenzin/TravelCard?style=for-the-badge" alt="Tamanho do Repositório">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js">
+  <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" alt="Firebase">
+</p>
+
 
 
 O **TravelCard** é uma aplicação web interativa que apresenta uma galeria de cartões de destinos de viagem. O projeto foi desenvolvido para demonstrar habilidades full-stack, integrando um front-end dinâmico e responsivo com um backend Node.js e serviços do Firebase para funcionalidades como autenticação.
 
 -----
 
+<div>
+   <img src="https://i.imgur.com/NEwn9MY.png">
+</div>
+
+-----
 ## ✨ Funcionalidades Implementadas
 
   * **Galeria de Destinos:** Exibição de múltiplos cartões de viagem, cada um com uma imagem, tags de categoria, título e uma breve descrição.

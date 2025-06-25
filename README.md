@@ -1,122 +1,123 @@
 # TravelCard
 
-O **TravelCard** é um projeto simples que cria um cartão de visita digital para Fernando de Noronha (por enquanto), destacando as principais informações sobre o local. O objetivo principal é praticar e aprimorar habilidades em **HTML** e **CSS**, criando um componente visualmente atraente e responsivo.
+<div>
+   <img src="https://i.imgur.com/NEwn9MY.png">
+</div>
 
----
 
-## Funcionalidades
+O **TravelCard** é uma aplicação web interativa que apresenta uma galeria de cartões de destinos de viagem. O projeto foi desenvolvido para demonstrar habilidades full-stack, integrando um front-end dinâmico e responsivo com um backend Node.js e serviços do Firebase para funcionalidades como autenticação.
 
-- **Design Responsivo**: O cartão se adapta a diferentes tamanhos de tela.
-- **Imagem de Destaque**: Exibe uma imagem representativa de Fernando de Noronha.
-- **Etiquetas Informativas**: Mostra categorias como "Natureza" e "Ilha".
-- **Descrição do Local**: Inclui uma breve descrição sobre o local.
-- **Botão Interativo**: Um botão "Leia Mais" com efeitos de hover e foco.
+-----
 
----
+## ✨ Funcionalidades Implementadas
 
-## Tecnologias Utilizadas
+  * **Galeria de Destinos:** Exibição de múltiplos cartões de viagem, cada um com uma imagem, tags de categoria, título e uma breve descrição.
+  * **Design Responsivo:** A interface se adapta de forma fluida a diferentes tamanhos de tela, de desktops a dispositivos móveis.
+  * **Carregamento Dinâmico de Dados:** As informações dos cartões são carregadas dinamicamente, permitindo fácil escalabilidade para adicionar novos destinos (via Node.js/Firebase).
+  * **Sistema de Autenticação:** Funcionalidades de **Login** e **Cadastro** de usuários implementadas com o **Firebase Authentication**.
+  * **Componentes Interativos:** Efeitos de `hover` nos cartões e botões para uma melhor experiência do usuário.
+  * **Identidade Visual:** O projeto conta com um logo customizado, "TravelCard", para reforçar a identidade da aplicação.
 
-- **HTML**: Estruturação do conteúdo do cartão.
-- **CSS**: Estilização do cartão, incluindo layout, cores, fontes e efeitos.
-- **Google Fonts**: Uso da fonte "Raleway" para melhorar a tipografia.
-- **Firebase**: Uso do banco de dados para login, e posteriormente para favoritos, filtro e imagens
+-----
 
----
+## 🛠️ Tecnologias Utilizadas
 
-## Como Executar o Projeto
+Este projeto foi construído utilizando uma stack moderna, separando as responsabilidades entre front-end e back-end.
+
+| Área | Tecnologia | Descrição |
+| :--- | :--- | :--- |
+| **Front-End** | `HTML5` | Estruturação semântica do conteúdo. |
+| | `CSS3` | Estilização avançada, layout Flexbox/Grid e responsividade. |
+| | `JavaScript` | Manipulação do DOM, interatividade e comunicação com a API. |
+| **Back-End** | `Node.js` | Ambiente de execução para o servidor. *(Se usar Express, adicione aqui)* |
+| **Serviços** | `Firebase` | Utilizado para **autenticação de usuários** e como banco de dados. |
+| **Fontes** | `Google Fonts` | Fonte "Raleway" para uma tipografia elegante. |
+| **Design** | `Canva` | Utilizado para a criação do logo "TravelCard". |
+
+-----
+
+## 🚀 Como Executar o Projeto Localmente
 
 ### Pré-requisitos
-- Navegador web moderno (Google Chrome, Firefox, Edge, etc.).
-- Editor de código (VS Code, Sublime Text, etc.) para visualizar ou editar o código.
 
-### Passos para Execução
+  * **Node.js** (versão 18 ou superior)
+  * **Git**
+  * Um editor de código como **VS Code** com a extensão **Live Server**.
 
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/Boudenzin/TravelCard.git
-   ```
+### Passos
 
-2. Navegue até o diretório do projeto:
-   ```bash
-   cd TravelCard
-   ```
+1.  **Clone o repositório:**
 
-3. Abra o arquivo no LiveServer para que o Firebase funcione
+    ```bash
+    git clone https://github.com/Boudenzin/TravelCard.git
+    ```
 
-4. Visualize o cartão de Fernando de Noronha e interaja com o botão "Leia Mais".
+2.  **Navegue até o diretório do projeto:**
 
----
+    ```bash
+    cd TravelCard
+    ```
 
-## Estrutura do Projeto
+3.  **Instale as dependências do Back-end:**
 
-O projeto está organizado da seguinte forma:
+    ```bash
+    cd backend
+    npm install
+    ```
+    
+4.  **Inicie o servidor Back-end:**
+
+    ```bash
+    npm start
+    ```
+
+    O servidor estará rodando em `http://localhost:3000`.
+
+5.  **Execute o Front-end:**
+
+      * Abra a pasta `TravelCard` no VS Code.
+      * Navegue até o arquivo `front-end/index.html`.
+      * Clique com o botão direito e selecione **"Open with Live Server"**. Isso garantirá que as requisições para o backend funcionem corretamente.
+
+-----
+
+## 📂 Estrutura do Projeto
+
+O projeto está organizado com uma clara separação entre o código do cliente (front-end) и o servidor (back-end).
 
 ```
 TravelCard/
 ├── backend/
-│   ├── server.js
+│   ├── node_modules/
+│   ├── package.json
+│   └── server.js       # Lógica do servidor e endpoints da API
 ├── front-end/
-│   ├── index.html
-│   ├── script.js
-│   ├── style.css
+│   ├── index.html      # Estrutura principal da página
+│   ├── script.js       # Lógica do lado do cliente
+│   └── style.css       # Estilos da aplicação
+├── .gitignore
 ├── LICENSE
 └── README.md
 ```
 
----
+-----
 
-## Objetivos Fase 1
+## 🎯 Próximos Passos (Roadmap)
 
-Aqui estão futuras metas que quero implementar nesse projeto
+Apesar das funcionalidades já implementadas, existem planos para evoluir o projeto:
 
-1. **Responsividade Avançada ✅**:
-   - Melhorar a adaptação do cartão para dispositivos móveis e tablets.
+  * [ ] **Feedback de Login:** Assim que o usuário logar ou se cadastrar, o sistema deve emitir um pop-up com a ação realizada
+  * [ ] **Sistema de Favoritos:** Permitir que usuários logados salvem seus destinos preferidos.
+  * [ ] **Filtros e Pesquisa:** Adicionar uma barra de busca e filtros para encontrar destinos por nome, categoria ou país.
+  * [ ] **Modo Escuro (Dark Mode):** Implementar um seletor de tema para melhorar a acessibilidade e preferência do usuário.
+  * [ ] **Páginas de Detalhes:** Criar uma página dedicada para cada destino ao clicar em "Leia Mais".
+  * [ ] **Deploy:** Publicar a aplicação em uma plataforma como Vercel ou Netlify para acesso público.
+  * [ ] **Testes:** Escrever testes unitários e de integração para garantir a qualidade e estabilidade do código.
 
-2. **Interatividade com JavaScript ✅**:
-   - Adicionar funcionalidades como abrir uma página detalhada ao clicar no botão "Leia Mais". 
-   - Adicionar uma descrição detalhada do local com um link que tenha mais informações
+-----
 
-3. **Animações ✅**:
-   - Incluir animações CSS para tornar o cartão mais dinâmico.
+## 📄 Licença
 
-4. **Multiplos Cartões ✅**:
-   - Criar uma lista de cartões para diferentes locais, como uma galeria.
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](https://www.google.com/search?q=LICENSE) para mais detalhes.
 
-5. **Integração com Backend ✅**:
-   - Usar um backend simples (Node.js, Flask) para carregar dados dinamicamente.
-
-6. **Deploy**:
-   - Publicar o projeto em uma plataforma como GitHub Pages, Netlify ou Vercel.
-
-7. **Testes**:
-   - Implementar testes de usabilidade para garantir que o cartão seja acessível e funcional.
-
----
-
-## Objetivos Fase 2
-
-1. **Logo para o TravelCard ✅**:
-   - Adição da logo feito no Canva com negrito gradiente.
-
-2. **Dark Mode / Customização de Tema**:
-   - Adicionar um botão para alternar entre tema claro e escuro.
-
-3. **Sistema de Login (Simples) ✅**:
-   - Login simulado com Firebase ou backend próprio.
-
-4. **Favoritos / Lista de Desejos**:
-   - Permitir que o usuário marque destinos como favoritos (localStorage ou backend).
-   - Exibir uma aba "Meus Favoritos".
-
-5. **Filtragem e Pesquisa**:
-   - Adicionar um campo de busca para filtrar os cartões por nome, país ou tags.
-   - Adicionar botões/filtros por continente, tipo de destino (praia, montanha, histórico, etc).
-
-
----
-
-## Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
----
+-----
